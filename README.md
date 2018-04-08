@@ -1,5 +1,12 @@
 # Tech test
 
+## How to install
+- composer install
+- Run ./init.sh
+- To add amount you can run : curl 127.0.0.1:8000/box/add/10
+- To get total added so far you can run : curl 127.0.0.1:8000/box/total
+- To get the history of amount added so far you can run : curl 127.0.0.1:8000/box/history
+
 ## Scenario
 We want to buy an iPhone X, and we are saving our spare money to do so. We have a box at home where we put our spare change every day and need a way to track this (in a geek way).
 

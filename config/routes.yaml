@@ -1,0 +1,14 @@
+app_box_add_amount:
+    path: /box/add/{amount}
+    controller: App\Controller\BoxController::add
+    methods: [GET]
+
+app_box_total:
+    path: /box/total
+    controller: App\Controller\BoxController::total
+    methods: [GET]
+
+app_box_history:
+    path: /box/history
+    controller: App\Controller\BoxController::history
+    methods: [GET]

@@ -1,0 +1,26 @@
+parameters:
+    app.dbname: "snaphr_test"
+    app.host: "localhost"
+    app.username: "root"
+    app.password: ""
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    App\:
+        resource: '../src/*'
+        exclude: '../src/{Entity,Migrations,Tests,Kernel.php}'
+
+    App\Controller\:
+        resource: '../src/Controller'
+        tags: ['controller.service_arguments']
+
+    App\Service\ProophConfiguration:
+        arguments:
+            $dbname: "%app.dbname%"
+            $host: "%app.host%"
+            $username: "%app.username%"
+            $password: "%app.password%"
